@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Game</title>
+</head>
+
+<body>
+  <h3>My favoirte game is:</h3>
+  <div id='game-answer'>
+
+  </div>
+  <input type="text" name="game" placeholder="game" id="game-input">
+  <button type="button" id="add-game">Favorite</button>
+</body>
+<script src="./makeGameView.js" charset="utf-8"></script>
+<script type="text/javascript">
+  // The makeGameView function is callable at the template method
+  document.getElementById('add-game').addEventListener('click', e => {
+    const game = document.getElementById('game-input').value
+    document.getElementById('game-answer').innerHTML = template({game})
+  })
+</script>
+
+</html>

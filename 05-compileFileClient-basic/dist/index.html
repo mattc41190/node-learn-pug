@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Drink</title>
+</head>
+
+<body>
+  <h3>My favoirte drink is:</h3>
+  <div id='drink-answer'>
+
+  </div>
+  <input type="text" name="drink" placeholder="drink" id="drink-input">
+  <button type="button" id="add-drink">Favorite</button>
+</body>
+<script src="./makeDrinkView.js" charset="utf-8"></script>
+<script type="text/javascript">
+  // The makeDrinkView function is callable at the template method
+  document.getElementById('add-drink').addEventListener('click', e => {
+    const drink = document.getElementById('drink-input').value
+    document.getElementById('drink-answer').innerHTML = template({drink})
+  })
+</script>
+
+</html>
